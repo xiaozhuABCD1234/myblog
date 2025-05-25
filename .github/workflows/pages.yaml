@@ -18,7 +18,7 @@ jobs:
         run: npm install
 
       - name: 生成静态文件
-        run: npx hexo g
+        run: npm run build
 
       - name: 部署
         uses: JamesIves/github-pages-deploy-action@v4
