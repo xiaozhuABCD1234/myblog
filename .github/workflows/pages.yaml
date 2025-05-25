@@ -1,0 +1,27 @@
+name: 自动化部署Hexo到Github Pages
+
+on:
+  push:
+    branches: main
+
+permissions:
+  contents: write
+
+jobs:
+  hexo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 生成静态文件
+        run: npx hexo g
+
+      - name: 部署
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public
