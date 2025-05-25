@@ -47,7 +47,7 @@ sidebar:
       icon: fab fa-github
       url: https://github.com/xiaozhuABCD1234
   typed_text_prefix: I`m
-  typed_text: ["Developer", "Student"]
+  typed_text: ["developer", "student", "paranoia", "idealist"]
   # typed_text: ["大雨落幽燕，白浪滔天，秦皇岛外打鱼船。 一片汪洋都不见，知向谁边？ 往事越千年，魏武挥鞭，东临碣石有遗篇。 萧瑟秋风今又是，换了人间。 "]
   info: # 个人信息
     - key: 地址
@@ -68,7 +68,7 @@ cover:
     - https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
     - https://images.pexels.com/photos/16533675/pexels-photo-16533675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
     - https://images.pexels.com/photos/9391325/pexels-photo-9391325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
-  type: random #可选 img || date || random
+  type: date #可选 img || date || random
 
 notice_outdate:
   enable: true
@@ -77,7 +77,7 @@ notice_outdate:
   position: top
 
 banner:
-  use_cover: true # Use the cover image for article details | 文章详情使用封面图
+  use_cover: false # Use the cover image for article details | 文章详情使用封面图
   default: # 默认横幅配置
     type: img # 横幅类型 <[img,slideshow,video]>
     bgurl: /img/banner.png # 背景图地址
@@ -144,3 +144,6 @@ datetime_foramt:
   archive:
     date: YY/MM/DD
     time: HH:mm
+
+# highlight:
+#   theme: false

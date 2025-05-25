@@ -119,3 +119,10 @@ abbrlink:
   auto_title: false #enable auto title, it can auto fill the title by path
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+
+# syntax_highlighter: prismjs
+# prismjs:
+#   preprocess: true
+#   line_number: true
+#   line_threshold: 0
+#   tab_replace: ""

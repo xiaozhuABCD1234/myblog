@@ -6,8 +6,7 @@ updated:
 tags:
   - linux
   - gnome
-  - 笔记
-categories: 教程
+categories: 笔记
 ---
 
 ## 美化
