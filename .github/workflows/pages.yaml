@@ -10,6 +10,9 @@ permissions:
 jobs:
   hexo:
     runs-on: ubuntu-latest
+    env:
+      # 设置时区为中国标准时间（UTC+8）
+      TZ: Asia/Shanghai
     steps:
       - name: 拉取代码
         uses: actions/checkout@v4
