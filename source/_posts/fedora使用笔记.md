@@ -1,12 +1,12 @@
 ---
 title: fedora使用笔记
+abbrlink: 35456
+date: 2024-12-15 22:17:06
+updated:
 tags:
   - linux
   - gnome
 categories: 备忘录
-
-abbrlink: 35456
-date: 2024-12-15 22:17:06
 ---
 
 ## 美化
