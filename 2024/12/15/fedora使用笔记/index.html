@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="美化安装 gnome 扩展 优化：GNOME Tweaks，管理 GNOME 桌面的少许区域 1sudo dnf install gnome-tweak-tool  VS Code 隐藏顶部标题栏按下Ctrl+,。搜索”window.titlebarstyle”，将”window.titlebarstyle”修改为 custo，重启 vscode 即可生效。 配置把用户文件下的文件夹该成中文123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fedora使用笔记">
+<meta property="og:url" content="http://example.com/2024/12/15/fedora%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="小朱的博客">
+<meta property="og:description" content="美化安装 gnome 扩展 优化：GNOME Tweaks，管理 GNOME 桌面的少许区域 1sudo dnf install gnome-tweak-tool  VS Code 隐藏顶部标题栏按下Ctrl+,。搜索”window.titlebarstyle”，将”window.titlebarstyle”修改为 custo，重启 vscode 即可生效。 配置把用户文件下的文件夹该成中文123">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-12-15T22:17:06.000Z">
+<meta property="article:modified_time" content="2025-05-25T09:01:06.137Z">
+<meta property="article:author" content="小朱">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="gnome">
+<meta name="twitter:card" content="summary">
+
+
+<title >fedora使用笔记</title>
+
+<!-- Favicon -->
+
+    <link href='https://avatars.githubusercontent.com/u/94727944?s=16&v=4?v=2.2.6' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='https://avatars.githubusercontent.com/u/94727944?s=32&v=4?v=2.2.6' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='https://avatars.githubusercontent.com/u/94727944?v=2.2.6' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"小朱","root":"/","typed_text":["Developer","Student"],"theme_version":"2.2.6","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"https://avatars.githubusercontent.com/u/94727944","icon16":"https://avatars.githubusercontent.com/u/94727944?s=16&v=4","icon32":"https://avatars.githubusercontent.com/u/94727944?s=32&v=4","apple_touch_icon":"https://avatars.githubusercontent.com/u/94727944","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(〒︿〒)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"12/26/2023 21:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/16533675/pexels-photo-16533675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/9391325/pexels-photo-9391325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-05-25 09:01:06"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.6" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://avatars.githubusercontent.com/u/94727944">
+    
+    
+        <div class="trm-logo-text">
+            xiao<span>zhu</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a data-no-swup href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/categories/" target="">
+                    分类
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a data-no-swup href="/tags/" target="">
+                    标签
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a data-no-swup href="/links/" target="">
+                    友链
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a data-no-swup href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            fedora使用笔记
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://avatars.githubusercontent.com/u/94727944">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        小朱
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/xiaozhuABCD1234" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                地址:
+            </div>
+            <div class="trm-label trm-label-light">
+                地球
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:xiaozhuABCD1234@163.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            12/15
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:17
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            小朱
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><h3 id="安装-gnome-扩展"><a href="#安装-gnome-扩展" class="headerlink" title="安装 gnome 扩展"></a>安装 gnome 扩展</h3><ol>
+<li><p>优化：GNOME Tweaks，管理 GNOME 桌面的少许区域</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install gnome-tweak-tool</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="VS-Code-隐藏顶部标题栏"><a href="#VS-Code-隐藏顶部标题栏" class="headerlink" title="VS Code 隐藏顶部标题栏"></a>VS Code 隐藏顶部标题栏</h3><p>按下<kbd>Ctrl</kbd>+<kbd>,</kbd>。<br>搜索”window.titlebarstyle”，将”window.titlebarstyle”修改为 custo，重启 vscode 即可生效。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="把用户文件下的文件夹该成中文"><a href="#把用户文件下的文件夹该成中文" class="headerlink" title="把用户文件下的文件夹该成中文"></a>把用户文件下的文件夹该成中文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=en_US</span><br><span class="line">xdg-user-dirs-gtk-update <span class="comment">#会弹出一个确认框，选择&quot;Update Names&quot; 来确认更新文件夹名称操作</span></span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+
+<h3 id="电池续航"><a href="#电池续航" class="headerlink" title="电池续航"></a>电池续航</h3><p>预配置的 power-profiles-daemon 在大多数系统上运行良好，但如果你仍遇到电池续航不佳的问题，可以尝试安装 tlp：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install tlp tlp-rdw</span><br></pre></td></tr></table></figure>
+
+<p>并屏蔽 power-profiles-daemon：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl mask power-profiles-daemon</span><br></pre></td></tr></table></figure>
+
+<p>同时安装 powertop：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install powertop</span><br><span class="line"><span class="built_in">sudo</span> powertop --auto-tune</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-iBus-雾凇拼音中文输入法"><a href="#安装-iBus-雾凇拼音中文输入法" class="headerlink" title="安装 iBus+雾凇拼音中文输入法"></a>安装 iBus+雾凇拼音中文输入法</h3><ol>
+<li>安装 ibus-rime</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install ibus-rime</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装 Plum</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash</span><br><span class="line">bash rime-install iDvel/rime-ice:others/recipes/full <span class="comment"># 安装雾凇拼音配置文件</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>修改系统键盘配置<br>在系统设置 ⇒ 键盘 ⇒ 输入源 ⇒ 添加 ⇒ 汉语 ⇒ 选择中文（rime）</li>
+<li>重启</li>
+</ol>
+<h3 id="中文软件显示异常"><a href="#中文软件显示异常" class="headerlink" title="中文软件显示异常"></a>中文软件显示异常</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf remove google-noto-sans-cjk-vf-fonts</span><br><span class="line"><span class="built_in">sudo</span> dnf install google-noto-sans-cjk-fonts</span><br></pre></td></tr></table></figure>
+
+<h2 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h2><h3 id="NVIDIA-驱动"><a href="#NVIDIA-驱动" class="headerlink" title="NVIDIA 驱动"></a>NVIDIA 驱动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm <span class="comment">#RPM Fusion</span></span><br><span class="line"><span class="built_in">sudo</span> dnf -y update</span><br><span class="line"><span class="built_in">sudo</span> dnf -y install akmod-nvidia <span class="comment">#安装最新驱动</span></span><br></pre></td></tr></table></figure>
+
+<p>然后重启一下系统。<br>检查一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br></pre></td></tr></table></figure>
+
+<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><p>如果是 fedora39 可以看<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Fedora&target_version=39&target_type=rpm_network">官网</a>。<br>如果是更新的版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget https://developer.download.nvidia.com/compute/cuda/repos/fedora39/x86_64/cuda-fedora39.repo -P /etc/yum.repos.d/</span><br><span class="line"><span class="built_in">sudo</span> update</span><br><span class="line"><span class="built_in">sudo</span> dnf clean all</span><br><span class="line"><span class="built_in">sudo</span> dnf -y install cuda-toolkit-12-6</span><br></pre></td></tr></table></figure>
+
+<p>检查一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
+
+<p>如果是 “bash: nvcc: 未找到命令…”<br>这通常是因为环境变量 PATH 没有正确设置，导致系统无法找到 nvcc 执行文件。</p>
+<ol>
+<li><p>检查 CUDA 安装路径：<br>通常 CUDA 工具包会被安装在 &#x2F;usr&#x2F;local&#x2F;cuda- &lt;version&gt; 目录下，其中 &lt;version&gt; 是 CUDA 的版本号。如果不知道确切的版本号，可以使用如下命令来查找：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> /usr/local/ | grep cuda</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>临时添加到 PATH:<br>如果您知道 CUDA 安装的路径，您可以临时将它添加到 PATH 环境变量中以测试是否解决了问题。假设 CUDA 被安装到了 &#x2F;usr&#x2F;local&#x2F;cuda-12.6,那么您可以这样做：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda-12.6/bin<span class="variable">$&#123;PATH:+:<span class="variable">$&#123;PATH&#125;</span>&#125;</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64<span class="variable">$&#123;LD_LIBRARY_PATH:+:<span class="variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后再次尝试运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
+
+<p>查看是否能找到 nvcc。</p>
+</li>
+<li><p>添加 CUDA 的路径到环境变量中:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>添加 CUDA 路径：<br>在文件的末尾添加以下两行，确保将 cuda-12.6 替换为您安装的具体 CUDA 版本号，如果它不同的话。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda-12.6/bin<span class="variable">$&#123;PATH:+:<span class="variable">$&#123;PATH&#125;</span>&#125;</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64<span class="variable">$&#123;LD_LIBRARY_PATH:+:<span class="variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>按下<kbd>Ctrl</kbd>+<kbd>O</kbd>保存，并按<kbd>Eenter</kbd>确认。<br>按下<kbd>Ctrl</kbd>+<kbd>X</kbd>退出。<br>使更改生效：<br>您需要让新的环境变量设置立即生效，可以运行以下命令来重新加载 .bashrc 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.6
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item blog-run-long"></div>
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="美化"><a rel="nofollow" class="trm-toc-link" href="#美化"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">美化</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="安装 gnome 扩展"><a rel="nofollow" class="trm-toc-link" href="#安装-gnome-扩展"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">安装 gnome 扩展</span></a></li><li class="trm-toc-item trm-toc-level-3" title="VS Code 隐藏顶部标题栏"><a rel="nofollow" class="trm-toc-link" href="#VS-Code-隐藏顶部标题栏"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">VS Code 隐藏顶部标题栏</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="配置"><a rel="nofollow" class="trm-toc-link" href="#配置"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">配置</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="把用户文件下的文件夹该成中文"><a rel="nofollow" class="trm-toc-link" href="#把用户文件下的文件夹该成中文"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">把用户文件下的文件夹该成中文</span></a></li><li class="trm-toc-item trm-toc-level-3" title="电池续航"><a rel="nofollow" class="trm-toc-link" href="#电池续航"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">电池续航</span></a></li><li class="trm-toc-item trm-toc-level-3" title="安装 iBus+雾凇拼音中文输入法"><a rel="nofollow" class="trm-toc-link" href="#安装-iBus-雾凇拼音中文输入法"><span class="trm-toc-number">2.3.</span> <span class="trm-toc-text">安装 iBus+雾凇拼音中文输入法</span></a></li><li class="trm-toc-item trm-toc-level-3" title="中文软件显示异常"><a rel="nofollow" class="trm-toc-link" href="#中文软件显示异常"><span class="trm-toc-number">2.4.</span> <span class="trm-toc-text">中文软件显示异常</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="驱动"><a rel="nofollow" class="trm-toc-link" href="#驱动"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">驱动</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="NVIDIA 驱动"><a rel="nofollow" class="trm-toc-link" href="#NVIDIA-驱动"><span class="trm-toc-number">3.1.</span> <span class="trm-toc-text">NVIDIA 驱动</span></a></li><li class="trm-toc-item trm-toc-level-3" title="CUDA"><a rel="nofollow" class="trm-toc-link" href="#CUDA"><span class="trm-toc-number">3.2.</span> <span class="trm-toc-text">CUDA</span></a></li></ol></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.2.6"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.6"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
