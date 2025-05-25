@@ -7,16 +7,19 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="使用 Github Actions 自动化部署 Hexo 到 Github Pages1. 创建 GitHub 仓库  操作步骤：   登录你的 GitHub 账号。  点击页面右上角的 New repository 按钮。  在 Repository name 处输入仓库名称（例如 myblog）。  可根据需要勾选 Initialize this repository with a READM">
+<meta name="description" content="使用 Github Actions 自动化部署 Hexo 到 Github Pages1. 创建 GitHub 仓库  操作步骤：  登录你的 GitHub 账号。  点击页面右上角的 New repository 按钮。  在 Repository name 处输入仓库名称（例如 myblog）。  可根据需要勾选 Initialize this repository with a README">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动化部署Hexo到GithubPages">
 <meta property="og:url" content="https://xiaozhuabcd1234.github.io/posts/9ffc30a8/index.html">
 <meta property="og:site_name" content="小朱的博客">
-<meta property="og:description" content="使用 Github Actions 自动化部署 Hexo 到 Github Pages1. 创建 GitHub 仓库  操作步骤：   登录你的 GitHub 账号。  点击页面右上角的 New repository 按钮。  在 Repository name 处输入仓库名称（例如 myblog）。  可根据需要勾选 Initialize this repository with a READM">
+<meta property="og:description" content="使用 Github Actions 自动化部署 Hexo 到 Github Pages1. 创建 GitHub 仓库  操作步骤：  登录你的 GitHub 账号。  点击页面右上角的 New repository 按钮。  在 Repository name 处输入仓库名称（例如 myblog）。  可根据需要勾选 Initialize this repository with a README">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-05-25T09:34:54.000Z">
-<meta property="article:modified_time" content="2025-05-25T13:02:10.339Z">
+<meta property="article:modified_time" content="2025-05-25T13:21:28.745Z">
 <meta property="article:author" content="小朱">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub Actions">
 <meta name="twitter:card" content="summary">
 
 
@@ -62,8 +65,8 @@
 
 
 <!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"xiaozhuabcd1234.github.io","author":"小朱","root":"/mybolg/","typed_text":["Developer","Student"],"theme_version":"2.2.6","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"https://avatars.githubusercontent.com/u/94727944","icon16":"https://avatars.githubusercontent.com/u/94727944?s=16&v=4","icon32":"https://avatars.githubusercontent.com/u/94727944?s=32&v=4","apple_touch_icon":"https://avatars.githubusercontent.com/u/94727944","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(〒︿〒)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"12/26/2023 21:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/16533675/pexels-photo-16533675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/9391325/pexels-photo-9391325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-05-25 21:02:10"};</script>
+<script>window.ASYNC_CONFIG = {"hostname":"xiaozhuabcd1234.github.io","author":"小朱","root":"/mybolg/","typed_text":["Developer","Student"],"theme_version":"2.2.6","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"https://avatars.githubusercontent.com/u/94727944","icon16":"https://avatars.githubusercontent.com/u/94727944?s=16&v=4","icon32":"https://avatars.githubusercontent.com/u/94727944?s=32&v=4","apple_touch_icon":"https://avatars.githubusercontent.com/u/94727944","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(✧∇✧) 叮咚！页面恢复元气啦～","hide_text":"(｡•́︿•̀｡) 呜咪…… 页面暂时躲猫猫啦～"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"12/26/2023 21:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/16533675/pexels-photo-16533675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/9391325/pexels-photo-9391325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-05-25 21:21:28"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/mybolg/css/index.css?v=2.2.6" id="trm-switch-style">
@@ -353,7 +356,7 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            21:02
+            21:21
         </div>
     </div>
     <div class="col-sm-4">
@@ -365,10 +368,9 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="使用-Github-Actions-自动化部署-Hexo-到-Github-Pages"><a href="#使用-Github-Actions-自动化部署-Hexo-到-Github-Pages" class="headerlink" title="使用 Github Actions 自动化部署 Hexo 到 Github Pages"></a>使用 Github Actions 自动化部署 Hexo 到 Github Pages</h1><p>1. 创建 GitHub 仓库</p>
+    <h2 id="使用-Github-Actions-自动化部署-Hexo-到-Github-Pages"><a href="#使用-Github-Actions-自动化部署-Hexo-到-Github-Pages" class="headerlink" title="使用 Github Actions 自动化部署 Hexo 到 Github Pages"></a>使用 Github Actions 自动化部署 Hexo 到 Github Pages</h2><p>1. 创建 GitHub 仓库</p>
 <ol>
-<li><strong>操作步骤</strong>：</li>
-</ol>
+<li><p><strong>操作步骤</strong>：</p>
 <ul>
 <li><p>登录你的 GitHub 账号。</p>
 </li>
@@ -379,17 +381,16 @@
 <li><p>可根据需要勾选 <code>Initialize this repository with a README</code>，完成仓库创建。</p>
 </li>
 </ul>
-<ol>
-<li><strong>关键说明</strong>：</li>
-</ol>
+</li>
+<li><p><strong>关键说明</strong>：</p>
 <ul>
 <li><p>强烈建议将仓库名称设置为 <code>username.github.io</code> 的格式（<code>username</code> 为你的 GitHub 用户名），如此配置后，可直接通过 <code>https://username.github.io</code> 访问博客，无需进行额外的域名配置。</p>
 </li>
 <li><p>若仓库名称并非 <code>username.github.io</code> 格式，则需要在 Hexo 项目的 <code>_config.yml</code> 文件中进行如下修改：</p>
-</li>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io;</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/myblog/</span> <span class="comment"># 根据实际仓库名称，明确指定根路径</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io;</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/myblog/</span> <span class="comment"># 根据实际仓库名称，明确指定根路径</span></span><br></pre></td></tr></table></figure>
-
+</li>
+</ol>
 <p>2. 创建工作流文件</p>
 <p>在 Hexo 项目的 <code>.github</code> 目录下，新建 <code>workflows</code> 文件夹，并在其中创建一个 <code>.yml</code> 或 <code>.yaml</code> 格式的文件（例如 <code>pages.yaml</code>），可通过以下命令在终端完成操作：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ./.github/workflows</span><br><span class="line"><span class="built_in">touch</span> pages.yaml</span><br></pre></td></tr></table></figure>
@@ -437,8 +438,8 @@
         
         <div class="trm-card-descr">
             <div class="trm-label trm-category trm-mb-20">
-                <a href=" /mybolg/categories/%E5%A4%87%E5%BF%98%E5%BD%95/">
-                    备忘录
+                <a href=" /mybolg/categories/%E6%95%99%E7%A8%8B/">
+                    教程
                 </a>
             </div>
             <h5>
@@ -511,7 +512,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="使用 Github Actions 自动化部署 Hexo 到 Github Pages"><a rel="nofollow" class="trm-toc-link" href="#使用-Github-Actions-自动化部署-Hexo-到-Github-Pages"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">使用 Github Actions 自动化部署 Hexo 到 Github Pages</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="使用 Github Actions 自动化部署 Hexo 到 Github Pages"><a rel="nofollow" class="trm-toc-link" href="#使用-Github-Actions-自动化部署-Hexo-到-Github-Pages"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">使用 Github Actions 自动化部署 Hexo 到 Github Pages</span></a></li></ol>
       </div>
     </div>
 
