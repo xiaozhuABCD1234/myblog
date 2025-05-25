@@ -6,7 +6,8 @@ updated:
 tags:
   - linux
   - gnome
-categories: 备忘录
+  - 笔记
+categories: 教程
 ---
 
 ## 美化
@@ -21,7 +22,7 @@ categories: 备忘录
 
 ### VS Code 隐藏顶部标题栏
 
-按下<kbd>Ctrl</kbd>+<kbd>,</kbd>。
+按下`Ctrl`+`,`。
 搜索"window.titlebarstyle"，将"window.titlebarstyle"修改为 custo，重启 vscode 即可生效。
 
 ## 配置
@@ -57,22 +58,22 @@ sudo powertop --auto-tune
 
 ### 安装 iBus+雾凇拼音中文输入法
 
-1. 安装 ibus-rime
+- 安装 ibus-rime
 
-```bash
-sudo dnf install ibus-rime
-```
+  ```bash
+  sudo dnf install ibus-rime
+  ```
 
-2. 安装 Plum
+- 安装 Plum
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash
-bash rime-install iDvel/rime-ice:others/recipes/full # 安装雾凇拼音配置文件
-```
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash
+  bash rime-install iDvel/rime-ice:others/recipes/full # 安装雾凇拼音配置文件
+  ```
 
-3. 修改系统键盘配置
-   在系统设置 ⇒ 键盘 ⇒ 输入源 ⇒ 添加 ⇒ 汉语 ⇒ 选择中文（rime）
-4. 重启
+- 修改系统键盘配置
+  在系统设置 ⇒ 键盘 ⇒ 输入源 ⇒ 添加 ⇒ 汉语 ⇒ 选择中文（rime）
+- 重启
 
 ### 中文软件显示异常
 
@@ -156,8 +157,8 @@ nvcc -V
    export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
    ```
 
-   按下<kbd>Ctrl</kbd>+<kbd>O</kbd>保存，并按<kbd>Eenter</kbd>确认。
-   按下<kbd>Ctrl</kbd>+<kbd>X</kbd>退出。
+   按下`Ctrl`+`O`保存，并按`Eenter`确认。
+   按下`Ctrl`+`X`退出。
    使更改生效：
    您需要让新的环境变量设置立即生效，可以运行以下命令来重新加载 .bashrc 文件：
 

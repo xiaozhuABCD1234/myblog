@@ -10,8 +10,8 @@ favicon:
   webmanifest: /site.webmanifest
   visibilitychange: true
   hidden: failure.ico
-  show_text: (/≧▽≦/)咦！又好了！
-  hide_text: (〒︿〒)喔哟，崩溃啦！
+  show_text: (✧∇✧) 叮咚！页面恢复元气啦～
+  hide_text: (｡•́︿•̀｡) 呜咪…… 页面暂时躲猫猫啦～
 
 user:
   name: 小朱
