@@ -22,7 +22,7 @@ categories: 笔记
 ### VS Code 隐藏顶部标题栏
 
 按下`Ctrl`+`,`。
-搜索"window.titlebarstyle"，将"window.titlebarstyle"修改为 custo，重启 vscode 即可生效。
+搜索`"window.titlebarstyle"`，将`"window.titlebarstyle"`修改为 `custo`，重启 vscode 即可生效。
 
 ## 配置
 
