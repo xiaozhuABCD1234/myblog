@@ -7,6 +7,7 @@ tags:
   - linux
   - gnome
 categories: 笔记
+cover:
 ---
 
 ## 美化
